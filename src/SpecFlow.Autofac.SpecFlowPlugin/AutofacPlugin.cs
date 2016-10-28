@@ -27,7 +27,7 @@ namespace SpecFlow.Autofac
                     var createScenarioContainerBuilder = containerBuilderFinder.GetCreateScenarioContainerBuilder();
                     var containerBuilder = createScenarioContainerBuilder();
                     var container = containerBuilder.Build();
-                    return container.BeginLifetimeScope();
+                    return container.BeginLifetimeScope("SpecflowScenario");
                 });
             };
         }
